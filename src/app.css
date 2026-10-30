@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+
+/* Font definitions */
+@font-family: var(--font-body);
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+Display&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Custom font variables */
+:root {
+  --font-body: 'Playfair Display', 'Bodoni Moda Display', PlayFair-DISPLAY, serif;
+}
+
+/* Warm ivory base color replacement */
+@layer base {
+  body {
+    @apply bg-[#F5EBD8] text-[#2c3e50];
+  }
+}
+
+/* Custom utilities */
+.scrubbed-reveal {
+  opacity: 1;
+  will-change: transform, opacity;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-[#F5EBD8] text-[#2c3e50] font-sans leading-relaxed;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Animation utilities */
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s cubic-bezier(0.24, 0, 0.33, 1) forwards;
+  }
+  
+  .animate-fade-up-2 {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.6s cubic-bezier(0.24, 0, 0.33, 1) 0.2s forwards;
+  }
+  
+  .animate-fade-up-3 {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 0.7s cubic-bezier(0.24, 0, 0.33, 1) 0.4s forwards;
+  }
+  
+  .animate-stagger-1 {
+    opacity: 1;
+    transform: translateY(0);
+    will-change: transform, opacity;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(var(--translate-y, 20px)) rotate(var(--rotate, 0deg));
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+
+/* Focus visible styles - accessible keyboard focus */
+*:focus-visible {
+  outline: 3px solid var(--color-browns-800);
+  outline-offset: 4px !important;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.1s !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-fade-up {
+    opacity: 1 !important;
+    transform: translateY(0)!important;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "ofaiado-landing",
+  "private": true,
+  "version": "1.0.0",
+  "description": "O Faiado - Antigüedades y segunda mano en Pontevedra",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "nuxt dev",
+    "generate": "nuxt generate",
+    "lint": "eslint .",
+    "preview": "nuxt prepare && nuxt start"
+  },
+  "devDependencies": {
+    "@nuxs/core": "^3.14.0",
+    "nuxt": "^3.7.0",
+    "vitest": "^2.1.17",
+    "@antfu/install-config": "^0.2.1"
+  },
+  "engines": {
+    "node": ">=18.15.0"
+  }
+}
