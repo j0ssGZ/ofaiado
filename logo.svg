@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+    <defs>
+        <!-- Sepia and warm tones for O Faiado antique aesthetic -->
+        <linearGradient id="gold-gradient" x1="28%" y1="11%" x2="67%" y2="69%">
+            <stop offset="0%" style="fill:#D4AF37"/>
+            <stop offset="40%" style="fill:#C5A02E"/>
+            <stop offset="100%" style="fill:#D4AF37"/>
+        </linearGradient>
+
+        <!-- Antique wood brown for main text -->
+        <linearGradient id="brown-gradient" x1="69.43%" y1="85.36%" x2="-8.12%" y2="-8.12%">
+            <stop offset="0%" style="fill:#6B461E"/>
+            <stop offset="50%" style="fill:#8B5A3B"/>
+            <stop offset="100%" style="fill:#734F1C"/>
+        </linearGradient>
+
+        <!-- Decorative ornate frame pattern -->
+        <pattern id="ornate-border" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+            <circle cx="25" cy="25" r="8" fill="#D4AF37"/>
+            <ellipse cx="75" cy="25" rx="6.2" ry="10" fill="#D4AF37"/>
+            <path d="M25 47 L33 49 L37 45 L25 42 L13 47" fill="#D4AF37"/>
+        </pattern>
+
+        <!-- Complex pattern background for antique feel -->
+        <pattern id="ornate-pattern-x" x="0" y="0" width="62.819281" height="62.819281">
+            <circle cx="25" cy="25" r="7.07" fill="url(#ornate-border)"/>
+        </pattern>
+
+        <!-- Decorative flourish -->
+        <path d="M20 40 L25 65 L30 40 L38 52 L45 38 L55 50 L70 35" fill="#D4AF37"/>
+    </defs>
+
+    <!-- Main composition with vintage border -->
+    <g id="main-composition">
+        <!-- Decorative outer border (ornate frame style) -->
+        <rect x="10" y="10" width="480" height="480" rx="30" ry="30" fill="url(#pattern-ornate-border)"/>
+
+        <!-- Inner decorative ring -->
+        <circle cx="250" cy="250" r="156" cx="250" cy="250" fill="#D4AF37" opacity="0.4"/>
+
+        <!-- Center content area with ornate framing -->
+        <g id="content-area">
+            <!-- Ornate frame border -->
+            <rect x="70" y="70" width="360" height="360" rx="25" ry="25" fill="#D4AF37" opacity="0.3">/>
+
+            <!-- Decorative inner ornamentation (top corners) -->
+            <circle cx="58" cy="60" r="14" fill="#D4AF37"/>
+            <circle cx="442" cy="60" r="14" fill="#D4AF37"/>
+
+            <!-- Complex flourish on top and bottom -->
+            <path d="M 45 90 L 65 110 M 55 88 L 65 85 L 75 95 M 45 125 L 65 145 M 55 130 L 65 132 L 68 128 M 70 95 L 75 92 M 78 102 L 65 98 M 70 145 L 65 150" fill="#D4AF37"/>
+
+            <!-- Text area with ornate text block -->
+            <g id="text-area">
+                <!-- Main logo text -->
+                <text x="250" y="240" font-family="serif" font-size="80" fill="#6B461E" text-anchor="middle" dominant-baseline="middle" style="font-weight:bold; letter-spacing:-3px;">
+                    O FAIADO
+                </text>
+
+                <!-- Subtitle/Description -->
+                <text x="250" y="268" font-family="serif" font-size="32" fill="#D4AF37" text-anchor="middle" dominant-baseline="middle" style="font-weight:bold; letter-spacing:-5px;">
+                    - Antigüedades
+                </text>
+
+                <!-- Decorative flourish below text -->
+                <path d="M 180 268 L 250 380 Q 270 410 320 360 L 360 290" fill="#D4AF37"/>
+            </g>
+
+            <!-- Decorative corner elements (bottom corners) -->
+            <circle cx="58" cy="440" r="14" fill="#D4AF37"/>
+            <circle cx="442" cy="440" r="14" fill="#D4AF37"/>
+
+            <!-- Ornate corner decorations (bottom left) -->
+            <g opacity="0.3">
+                <circle cx="85" cy="415" r="8" fill="#D4AF37"/>
+            </g>
+
+            <!-- Complex flourishes for vintage aesthetic -->
+            <path d="M 20 25 L 45 15 M 20 40 L 45 30 L 60 25 L 75 10" fill="#D4AF37"/>
+        </g>
+    </g>
+
+    <!-- Background pattern (ornate) -->
+    <rect x="0" y="0" width="500" height="500" rx="50" ry="50" fill="url(#ornate-pattern-x)"/>
+
+    <!-- Logo placeholder text for accessibility and SEO -->
+    <text x="250" y="460" font-family="serif" font-size="18" fill="#734F1C" text-anchor="middle" dominant-baseline="middle" style="font-weight:bold;">
+        O Faiado - Logo placeholder: sepia-toned antique design
+    </text>
+</svg>
