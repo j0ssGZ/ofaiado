@@ -1,0 +1,15 @@
+# O Faiado - robots.txt
+# Search engine accessibility permissions file
+#
+# By default, all pages and resources are indexable.
+# This allows Google, Bing, and other search engines to crawl our site.
+
+User-Agent: *
+Allow: /
+
+# Disallow crawling of private or admin paths (if any exist)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow specific sitemap to be discovered
+Sitemap: https://ofaiado.es/sitemap.xml
