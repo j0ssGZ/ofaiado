@@ -97,3 +97,38 @@ Si falla la primera incorporación de hosts, no existe un release anterior de O 
 ## Registro de despliegue
 
 El SHA exacto, release activo, copia de configuración, resultados HTTP/TLS y comprobaciones de regresión se registran en `/opt/gateway/backups/ofaiado/<release-id>/`. La ejecución inicial dejará constancia adicional en este documento al completar la verificación pública.
+
+### Primer despliegue verificado: 31 de octubre de 2026, UTC
+
+- Estado: **SUCCESS**, comprobado públicamente y en Chrome en `https://ofaiado.es/`.
+- SHA del código desplegado: `0ec0f91507ee860c842bd4e3869f71f9459ed6c1`.
+- Release: `20261031T003113Z-0ec0f91507ee`.
+- Compilación local: `/tmp/ofaiado-deploy-20261031T002600Z/source/.output/public`.
+- Activo: `/srv/www/ofaiado/current -> releases/20261031T003113Z-0ec0f91507ee`.
+- Copias y evidencias: `/opt/gateway/backups/ofaiado/20261031T003113Z-0ec0f91507ee/`.
+- DNS confirmado con respuesta autoritativa `aa` en ambos servidores GoDaddy, TTL 600; sin AAAA.
+- Portada, robots, sitemap y los 19 archivos del release: **200**, MIME correcto y SHA-256 idéntico al build local.
+- HTTP a HTTPS: **308**. HTTPS de `www` al dominio canónico: **308**, con ruta y query conservadas.
+- Certificados separados de Let's Encrypt, cadena y nombres verificados, válidos hasta **28 de enero de 2027, 23:33:43 UTC**; renovación automática de Caddy.
+- Logo, imagen, scripts y estilos sin errores de consola en Chrome. Hoja de Google Fonts y nueve archivos de fuente comprobados con **200**.
+- Compresión gzip y cabeceras de seguridad comprobadas. Directorios sin índice y rutas privadas: **404**.
+- Canonical y `og:url`: `https://ofaiado.es/`; JSON-LD LocalBusiness/Store con la dirección completa de Pontevedra.
+- Ningún runtime Nuxt/Node instalado o arrancado en el VPS para O Faiado.
+
+Los siete hosts previamente configurados mantienen códigos, redirecciones, títulos y contenido: `alerts.surf`, `famegal.com`, `www.famegal.com`, `relampagospontevedra.com`, `www.relampagospontevedra.com`, `dreamscape.198.244.233.153.sslip.io` y `english-parrot-lab.198.244.233.153.sslip.io`. En Dreamscape la única diferencia HTML es el valor variable por petición del campo `csrfmiddlewaretoken`. Los 12 contenedores conservan IDs, fechas de arranque y estado de salud; los servicios del sistema y las rutas anteriores de Caddy permanecen iguales. Caddy conserva el PID 1939 tras la recarga.
+
+Incidencia anterior al despliegue: `laialabs.com` no resuelve desde el VPS y las pruebas externas previas también fallaron en DNS/TLS. No figura en el gateway inspeccionado. Se constató la misma incidencia después; no se modificó su configuración.
+
+Este es el primer release de O Faiado: no existía un sitio anterior ni un symlink `previous`. El release actual se conserva para servir como rollback en el siguiente despliegue. Para retirar esta incorporación y volver exactamente a la configuración anterior, **solo si no hubo cambios posteriores en el Caddyfile**, ejecutar:
+
+```sh
+backup=/opt/gateway/backups/ofaiado/20261031T003113Z-0ec0f91507ee
+sudo cmp -s /opt/gateway/Caddyfile "$backup/Caddyfile.activated" &&
+sudo sh -c 'cat "$1/Caddyfile.before" > /opt/gateway/Caddyfile' sh "$backup" &&
+docker exec gateway-caddy-1 caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile &&
+docker exec gateway-caddy-1 caddy reload --config /etc/caddy/Caddyfile --adapter caddyfile
+```
+
+Si la comparación falla, no restaurar esa copia completa: preparar y validar un candidato que retire exclusivamente el bloque delimitado por `# BEGIN O FAIADO` y `# END O FAIADO`, preservando los cambios posteriores de otros sitios. No borrar los releases ni los certificados.
+
+No quedan pasos manuales pendientes para publicar O Faiado. El lint no disponible y la incidencia previa de `laialabs.com` quedan registrados para tratamiento separado.
