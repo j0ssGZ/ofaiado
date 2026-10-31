@@ -136,7 +136,7 @@ No quedan pasos manuales pendientes para publicar O Faiado. El lint no disponibl
 ### Actualización de iconos: 31 de octubre de 2026, UTC
 
 - SHA desplegado: `21aa53a22efc18305a577772850b20a829858f03`.
-- Release activo: `/srv/www/ofaiado/releases/20261031T004217Z-21aa53a22efc`.
+- Release activo en ese momento: `/srv/www/ofaiado/releases/20261031T004217Z-21aa53a22efc`.
 - Release anterior conservado en `/srv/www/ofaiado/previous`: `releases/20261031T003113Z-0ec0f91507ee`.
 - Evidencias y manifiesto: `/opt/gateway/backups/ofaiado/20261031T004217Z-21aa53a22efc/`.
 - Las estrellas y flechas son SVG monocromos que heredan el color del texto, sin depender de glifos que iOS pueda mostrar como emoji.
@@ -144,3 +144,12 @@ No quedan pasos manuales pendientes para publicar O Faiado. El lint no disponibl
 - Los siete hosts anteriores conservaron sus respuestas; IDs, fechas de inicio y salud de los contenedores y el hash del Caddyfile no cambiaron. No fue necesario recargar Caddy.
 
 Para volver al release anterior, comprobar primero que `previous` apunta al release esperado y que contiene `index.html`. Después preparar un enlace temporal con ese mismo destino relativo y activar mediante `sudo mv -Tf`, tal como se describe en la sección **Rollback**. Conservar ambos releases.
+
+### Actualización de la descripción para buscadores: 31 de octubre de 2026, UTC
+
+- SHA desplegado: `68ce79a6c0c1d3e3b03521edea812bbc437bfd38`.
+- Release activo: `/srv/www/ofaiado/releases/20261031T015824Z-68ce79a6c0c1`.
+- Release anterior conservado en `/srv/www/ofaiado/previous`: `releases/20261031T004217Z-21aa53a22efc`.
+- Evidencias y manifiesto: `/opt/gateway/backups/ofaiado/20261031T015824Z-68ce79a6c0c1/`.
+- La descripción, el título y el texto visible incluyen antigüedades, segunda mano y vaciados en Pontevedra. Google decide qué fragmento muestra y cuándo actualiza su índice.
+- Generación estática, HTTPS, 19 archivos y redirecciones verificados. Los siete hosts previos conservaron sus respuestas; contenedores y Caddy no cambiaron.
