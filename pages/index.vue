@@ -110,7 +110,7 @@ useHead({
             fill="currentColor"
             stroke="none"
           /></svg
-        ><span>Instagram</span><span aria-hidden="true">↗</span></a
+        ><span>Instagram</span><span><DecorativeIcon name="diagonal" /></span></a
       >
     </header>
 
@@ -118,7 +118,7 @@ useHead({
       <section class="hero wrap">
         <div class="hero-copy">
           <p class="eyebrow">
-            <span class="tiny-star">✳</span> ANTIGÜEDADES & SEGUNDA MANO
+            <span class="tiny-star"><DecorativeIcon name="star" /></span> ANTIGÜEDADES & SEGUNDA MANO
           </p>
           <h1>
             Piezas con<br />pasado.<br /><em>Historias<br />por vivir.</em>
@@ -129,13 +129,13 @@ useHead({
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#descubre"
-              >Entra y descubre <span aria-hidden="true">↗</span></a
+              >Entra y descubre <span><DecorativeIcon name="diagonal" /></span></a
             ><a
               class="text-link"
               :href="maps"
               target="_blank"
               rel="noopener noreferrer"
-              >Ven a vernos <span aria-hidden="true">→</span></a
+              >Ven a vernos <span><DecorativeIcon name="right" /></span></a
             >
           </div>
           <div class="hero-location">
@@ -175,9 +175,9 @@ useHead({
 
       <div class="values-band">
         <div class="wrap">
-          <span>Objetos con carácter</span><i>✳</i
-          ><span>Segundas oportunidades</span><i>✳</i
-          ><span>Comercio de aquí</span><i>✳</i><span>Mucho por descubrir</span>
+          <span>Objetos con carácter</span><i><DecorativeIcon name="star" /></i
+          ><span>Segundas oportunidades</span><i><DecorativeIcon name="star" /></i
+          ><span>Comercio de aquí</span><i><DecorativeIcon name="star" /></i><span>Mucho por descubrir</span>
         </div>
       </div>
 
@@ -252,7 +252,7 @@ useHead({
             <h3>{{ category.title }}</h3>
             <p>{{ category.text }}</p>
             <a :href="instagram" target="_blank" rel="noopener noreferrer"
-              >Pregunta por nuestras piezas <span aria-hidden="true">↗</span></a
+              >Pregunta por nuestras piezas <span><DecorativeIcon name="diagonal" /></span></a
             >
           </article>
         </div>
@@ -282,7 +282,7 @@ useHead({
               :href="instagram"
               target="_blank"
               rel="noopener noreferrer"
-              >Hablemos de tu vaciado <span aria-hidden="true">↗</span></a
+              >Hablemos de tu vaciado <span><DecorativeIcon name="diagonal" /></span></a
             >
           </div>
           <div class="steps">
@@ -352,7 +352,7 @@ useHead({
                   fill="currentColor"
                   stroke="none"
                 /></svg
-              >Síguenos en Instagram <span aria-hidden="true">↗</span></a
+              >Síguenos en Instagram <span><DecorativeIcon name="diagonal" /></span></a
             ><span class="instagram-handle">@ofaiado_pontevedra</span>
           </div>
           <a
@@ -380,9 +380,9 @@ useHead({
                   stroke="none"
                 /></svg
               ><strong>Puede estar<br /><em>esperándote.</em></strong
-              ><span>O FAIADO · PONTEVEDRA ↗</span>
+              ><span>O FAIADO · PONTEVEDRA <DecorativeIcon name="diagonal" /></span>
             </div>
-            <span class="art-star" aria-hidden="true">✳</span></a
+            <span class="art-star"><DecorativeIcon name="star" /></span></a
           >
         </div>
       </section>
@@ -404,7 +404,7 @@ useHead({
             :href="maps"
             target="_blank"
             rel="noopener noreferrer"
-            >Cómo llegar <span aria-hidden="true">↗</span></a
+            >Cómo llegar <span><DecorativeIcon name="diagonal" /></span></a
           >
           <p>
             ¿Vienes a por algo concreto? Escríbenos antes por Instagram y lo
@@ -456,13 +456,13 @@ useHead({
         /></a>
         <p>Lo de siempre.<br /><em>Como nunca.</em></p>
         <a :href="instagram" target="_blank" rel="noopener noreferrer"
-          >Instagram <span aria-hidden="true">↗</span></a
+          >Instagram <span><DecorativeIcon name="diagonal" /></span></a
         >
       </div>
       <div class="wrap footer-bottom">
         <span>© {{ new Date().getFullYear() }} O Faiado</span
         ><span>Antigüedades y segunda mano en Pontevedra</span
-        ><a href="#">Volver arriba ↑</a>
+        ><a href="#">Volver arriba <DecorativeIcon name="up" /></a>
       </div>
     </footer>
   </div>

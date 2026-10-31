@@ -83,6 +83,12 @@ summary:focus-visible {
   height: 21px;
   flex: none;
 }
+.symbol-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.12em;
+}
 .top-strip {
   background: var(--wine);
   color: #f7efe4;
@@ -499,6 +505,11 @@ summary:focus-visible {
   width: 93px;
   height: 93px;
   margin: 18px 0;
+}
+.social-sheet .symbol-icon {
+  width: 1em;
+  height: 1em;
+  margin: 0;
 }
 .social-sheet strong {
   font-family: var(--serif);
