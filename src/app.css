@@ -159,6 +159,30 @@ summary:focus-visible {
 .tiny-star {
   font-size: 21px;
 }
+.hero-service-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin-bottom: 20px;
+  padding: 8px 14px;
+  border: 1px solid #c6a59d;
+  border-radius: 999px;
+  background: #f2e8df;
+  color: var(--wine);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+.hero-service-tag:hover {
+  background: #eadbd1;
+}
+.hero-service-tag .symbol-icon {
+  flex: none;
+  font-size: 14px;
+}
 .hero h1 {
   font-size: clamp(65px, 6.1vw, 88px);
   line-height: 0.97;

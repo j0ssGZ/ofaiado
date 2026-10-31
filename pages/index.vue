@@ -118,8 +118,13 @@ useHead({
       <section class="hero wrap">
         <div class="hero-copy">
           <p class="eyebrow">
-            <span class="tiny-star"><DecorativeIcon name="star" /></span> ANTIGÜEDADES · SEGUNDA MANO · VACIADOS
+            <span class="tiny-star"><DecorativeIcon name="star" /></span> ANTIGÜEDADES · SEGUNDA MANO
           </p>
+          <a class="hero-service-tag" href="#vaciados">
+            <DecorativeIcon name="star" />
+            Vaciados de viviendas y locales
+            <DecorativeIcon name="diagonal" />
+          </a>
           <h1>
             Piezas con<br />pasado.<br /><em>Historias<br />por vivir.</em>
           </h1>
