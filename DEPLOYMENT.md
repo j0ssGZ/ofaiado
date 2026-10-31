@@ -148,8 +148,17 @@ Para volver al release anterior, comprobar primero que `previous` apunta al rele
 ### Actualización de la descripción para buscadores: 31 de octubre de 2026, UTC
 
 - SHA desplegado: `68ce79a6c0c1d3e3b03521edea812bbc437bfd38`.
-- Release activo: `/srv/www/ofaiado/releases/20261031T015824Z-68ce79a6c0c1`.
+- Release activo en ese momento: `/srv/www/ofaiado/releases/20261031T015824Z-68ce79a6c0c1`.
 - Release anterior conservado en `/srv/www/ofaiado/previous`: `releases/20261031T004217Z-21aa53a22efc`.
 - Evidencias y manifiesto: `/opt/gateway/backups/ofaiado/20261031T015824Z-68ce79a6c0c1/`.
 - La descripción, el título y el texto visible incluyen antigüedades, segunda mano y vaciados en Pontevedra. Google decide qué fragmento muestra y cuándo actualiza su índice.
 - Generación estática, HTTPS, 19 archivos y redirecciones verificados. Los siete hosts previos conservaron sus respuestas; contenedores y Caddy no cambiaron.
+
+### Vaciados destacados en la portada: 31 de octubre de 2026, UTC
+
+- SHA desplegado: `375de4d7118b591ae6baad6bff99d8b3386e4f1a`.
+- Release activo: `/srv/www/ofaiado/releases/20261031T022247Z-375de4d7118b`.
+- Release anterior conservado en `/srv/www/ofaiado/previous`: `releases/20261031T015824Z-68ce79a6c0c1`.
+- Evidencias y manifiesto: `/opt/gateway/backups/ofaiado/20261031T022247Z-375de4d7118b/`.
+- La portada destaca los vaciados en el texto superior y el botón principal enlaza a la sección del servicio.
+- Generación estática, HTML publicado, HTTPS, 19 archivos y redirecciones verificados. Los siete hosts previos conservaron sus respuestas; contenedores y Caddy no cambiaron. No fue posible hacer una comprobación visual porque el navegador de revisión no estaba disponible.
