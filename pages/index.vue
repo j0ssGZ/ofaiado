@@ -43,6 +43,7 @@ useHead({
     },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: "es_ES" },
+    { property: "og:url", content: "https://ofaiado.es/" },
   ],
   link: [{ rel: "canonical", href: "https://ofaiado.es/" }],
   script: [
@@ -50,7 +51,7 @@ useHead({
       type: "application/ld+json",
       innerHTML: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "Store",
+        "@type": ["LocalBusiness", "Store"],
         name: "O Faiado",
         url: "https://ofaiado.es/",
         sameAs: [instagram],
