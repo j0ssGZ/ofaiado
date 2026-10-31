@@ -118,7 +118,7 @@ useHead({
       <section class="hero wrap">
         <div class="hero-copy">
           <p class="eyebrow">
-            <span class="tiny-star"><DecorativeIcon name="star" /></span> ANTIGÜEDADES & SEGUNDA MANO
+            <span class="tiny-star"><DecorativeIcon name="star" /></span> ANTIGÜEDADES · SEGUNDA MANO · VACIADOS
           </p>
           <h1>
             Piezas con<br />pasado.<br /><em>Historias<br />por vivir.</em>
@@ -129,17 +129,15 @@ useHead({
             ¡Visítanos!
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#descubre"
-              >Entra y descubre <span><DecorativeIcon name="diagonal" /></span></a
+            <a class="button primary" href="#vaciados"
+              >Vaciados de viviendas y locales <span><DecorativeIcon name="diagonal" /></span></a
             ><a
               class="text-link"
-              :href="maps"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Ven a vernos <span><DecorativeIcon name="right" /></span></a
+              href="#descubre"
+              >Ver la tienda <span><DecorativeIcon name="right" /></span></a
             >
           </div>
-          <div class="hero-location">
+          <a class="hero-location" :href="maps" target="_blank" rel="noopener noreferrer" aria-label="Cómo llegar a O Faiado en Pontevedra">
             <svg
               class="icon"
               viewBox="0 0 24 24"
@@ -151,7 +149,7 @@ useHead({
               <path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z" />
               <circle cx="12" cy="10" r="2.5" /></svg
             ><span>Rúa Médico Germán Adrio Sobrido, 4 · Pontevedra</span>
-          </div>
+          </a>
         </div>
         <div class="hero-visual">
           <div class="photo-frame">

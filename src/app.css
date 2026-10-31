@@ -176,7 +176,8 @@ summary:focus-visible {
 }
 .hero-actions {
   display: flex;
-  gap: 26px;
+  flex-wrap: wrap;
+  gap: 12px 26px;
   align-items: center;
   margin-top: 29px;
 }
@@ -686,7 +687,7 @@ section[id] {
     height: 580px;
   }
   .hero-actions {
-    gap: 16px;
+    gap: 12px 16px;
   }
   .hero-location {
     font-size: 8px;
@@ -770,7 +771,7 @@ section[id] {
   }
   .hero-actions {
     margin-top: 23px;
-    gap: 24px;
+    gap: 12px 24px;
   }
   .hero-location {
     margin-top: 26px;
@@ -967,7 +968,7 @@ section[id] {
     height: 73px;
   }
   .hero-actions {
-    gap: 17px;
+    gap: 12px 17px;
   }
   .button {
     padding: 14px 17px;
