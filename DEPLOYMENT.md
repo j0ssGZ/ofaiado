@@ -104,7 +104,7 @@ El SHA exacto, release activo, copia de configuración, resultados HTTP/TLS y co
 - SHA del código desplegado: `0ec0f91507ee860c842bd4e3869f71f9459ed6c1`.
 - Release: `20261031T003113Z-0ec0f91507ee`.
 - Compilación local: `/tmp/ofaiado-deploy-20261031T002600Z/source/.output/public`.
-- Activo: `/srv/www/ofaiado/current -> releases/20261031T003113Z-0ec0f91507ee`.
+- Release activo en ese momento: `/srv/www/ofaiado/current -> releases/20261031T003113Z-0ec0f91507ee`.
 - Copias y evidencias: `/opt/gateway/backups/ofaiado/20261031T003113Z-0ec0f91507ee/`.
 - DNS confirmado con respuesta autoritativa `aa` en ambos servidores GoDaddy, TTL 600; sin AAAA.
 - Portada, robots, sitemap y los 19 archivos del release: **200**, MIME correcto y SHA-256 idéntico al build local.
@@ -132,3 +132,15 @@ docker exec gateway-caddy-1 caddy reload --config /etc/caddy/Caddyfile --adapter
 Si la comparación falla, no restaurar esa copia completa: preparar y validar un candidato que retire exclusivamente el bloque delimitado por `# BEGIN O FAIADO` y `# END O FAIADO`, preservando los cambios posteriores de otros sitios. No borrar los releases ni los certificados.
 
 No quedan pasos manuales pendientes para publicar O Faiado. El lint no disponible y la incidencia previa de `laialabs.com` quedan registrados para tratamiento separado.
+
+### Actualización de iconos: 31 de octubre de 2026, UTC
+
+- SHA desplegado: `21aa53a22efc18305a577772850b20a829858f03`.
+- Release activo: `/srv/www/ofaiado/releases/20261031T004217Z-21aa53a22efc`.
+- Release anterior conservado en `/srv/www/ofaiado/previous`: `releases/20261031T003113Z-0ec0f91507ee`.
+- Evidencias y manifiesto: `/opt/gateway/backups/ofaiado/20261031T004217Z-21aa53a22efc/`.
+- Las estrellas y flechas son SVG monocromos que heredan el color del texto, sin depender de glifos que iOS pueda mostrar como emoji.
+- Generación estática correcta; 19 archivos públicos coinciden con el build local, portada HTTPS 200 y redirecciones 308 correctas. Vista móvil y 17 SVG revisados en Chrome, sin errores de consola.
+- Los siete hosts anteriores conservaron sus respuestas; IDs, fechas de inicio y salud de los contenedores y el hash del Caddyfile no cambiaron. No fue necesario recargar Caddy.
+
+Para volver al release anterior, comprobar primero que `previous` apunta al release esperado y que contiene `index.html`. Después preparar un enlace temporal con ese mismo destino relativo y activar mediante `sudo mv -Tf`, tal como se describe en la sección **Rollback**. Conservar ambos releases.
