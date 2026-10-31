@@ -157,8 +157,17 @@ Para volver al release anterior, comprobar primero que `previous` apunta al rele
 ### Vaciados destacados en la portada: 31 de octubre de 2026, UTC
 
 - SHA desplegado: `375de4d7118b591ae6baad6bff99d8b3386e4f1a`.
-- Release activo: `/srv/www/ofaiado/releases/20261031T022247Z-375de4d7118b`.
+- Release activo en ese momento: `/srv/www/ofaiado/releases/20261031T022247Z-375de4d7118b`.
 - Release anterior conservado en `/srv/www/ofaiado/previous`: `releases/20261031T015824Z-68ce79a6c0c1`.
 - Evidencias y manifiesto: `/opt/gateway/backups/ofaiado/20261031T022247Z-375de4d7118b/`.
 - La portada destaca los vaciados en el texto superior y el botón principal enlaza a la sección del servicio.
 - Generación estática, HTML publicado, HTTPS, 19 archivos y redirecciones verificados. Los siete hosts previos conservaron sus respuestas; contenedores y Caddy no cambiaron. No fue posible hacer una comprobación visual porque el navegador de revisión no estaba disponible.
+
+### Etiqueta de vaciados en portada: 31 de octubre de 2026, UTC
+
+- SHA desplegado: `a7eca786d8df73df4520a87c1bf0d96e91be1f3f`.
+- Release activo: `/srv/www/ofaiado/releases/20261031T022701Z-a7eca786d8df`.
+- Release anterior conservado en `/srv/www/ofaiado/previous`: `releases/20261031T022247Z-375de4d7118b`.
+- Evidencias y manifiesto: `/opt/gateway/backups/ofaiado/20261031T022701Z-a7eca786d8df/`.
+- La etiqueta enlaza a la sección de vaciados y utiliza iconos SVG monocromos.
+- Generación estática, HTML publicado, HTTPS, 19 archivos y redirecciones verificados. Los siete hosts previos conservaron sus respuestas; contenedores y Caddy no cambiaron. La revisión visual no pudo realizarse porque el navegador no respondió.
