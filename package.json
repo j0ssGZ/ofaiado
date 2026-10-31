@@ -6,16 +6,16 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "nuxt dev",
+    "build": "nuxt build",
     "generate": "nuxt generate",
     "lint": "eslint .",
-    "preview": "nuxt prepare && nuxt start"
+    "preview": "nuxt prepare && nuxt start",
+    "dev": "nuxt dev --host 0.0.0.0"
   },
   "devDependencies": {
-    "@nuxs/core": "^3.14.0",
+    "@tailwindcss/vite": "^4.3.3",
     "nuxt": "^3.7.0",
-    "vitest": "^2.1.17",
-    "@antfu/install-config": "^0.2.1"
+    "tailwindcss": "^4.3.3"
   },
   "engines": {
     "node": ">=18.15.0"

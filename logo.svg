@@ -37,12 +37,12 @@
         <rect x="10" y="10" width="480" height="480" rx="30" ry="30" fill="url(#pattern-ornate-border)"/>
 
         <!-- Inner decorative ring -->
-        <circle cx="250" cy="250" r="156" cx="250" cy="250" fill="#D4AF37" opacity="0.4"/>
+        <circle cx="250" cy="250" r="156" fill="#D4AF37" opacity="0.4"/>
 
         <!-- Center content area with ornate framing -->
         <g id="content-area">
             <!-- Ornate frame border -->
-            <rect x="70" y="70" width="360" height="360" rx="25" ry="25" fill="#D4AF37" opacity="0.3">/>
+            <rect x="70" y="70" width="360" height="360" rx="25" ry="25" fill="#D4AF37" opacity="0.3"/>
 
             <!-- Decorative inner ornamentation (top corners) -->
             <circle cx="58" cy="60" r="14" fill="#D4AF37"/>

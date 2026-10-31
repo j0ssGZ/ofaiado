@@ -5,13 +5,13 @@ export default defineNuxtConfig({
   modules: [],
   
   // CSS configuration
-  css: [
-    'src/app.css'
-  ],
+  css: ['~/src/app.css'],
   
   // Tailwind config
-  tailwindcss: {
-    css: '\$font-family-definitions;',
+  vite: {
+    plugins: [
+      (await import('@tailwindcss/vite')).default(),
+    ],
   },
   
   compatibilityDate: '2024-01-01',
