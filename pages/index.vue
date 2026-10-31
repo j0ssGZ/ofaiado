@@ -25,21 +25,21 @@ const categories = [
 ];
 useHead({
   htmlAttrs: { lang: "es" },
-  title: "O Faiado · Antigüedades y segunda mano en Pontevedra",
+  title: "Antigüedades y vaciados en Pontevedra | O Faiado",
   meta: [
     {
       name: "description",
       content:
-        "Antigüedades, segunda mano y objetos con historia en Pontevedra. Vaciados de viviendas y locales. Descubre O Faiado y visita nuestra tienda.",
+        "En O Faiado encontrarás antigüedades, muebles y objetos de segunda mano en Pontevedra. También realizamos vaciados de viviendas o locales. ¡Visítanos!",
     },
     {
       property: "og:title",
-      content: "O Faiado · Piezas con pasado. Historias por vivir.",
+      content: "Antigüedades y vaciados en Pontevedra | O Faiado",
     },
     {
       property: "og:description",
       content:
-        "Antigüedades, segunda mano y hallazgos con carácter en Pontevedra.",
+        "En O Faiado encontrarás antigüedades, muebles y objetos de segunda mano en Pontevedra. También realizamos vaciados de viviendas o locales. ¡Visítanos!",
     },
     { property: "og:type", content: "website" },
     { property: "og:locale", content: "es_ES" },
@@ -124,8 +124,9 @@ useHead({
             Piezas con<br />pasado.<br /><em>Historias<br />por vivir.</em>
           </h1>
           <p class="hero-description">
-            Hay cosas que el tiempo hace más bonitas. Descúbrelas en O Faiado,
-            tu rincón de antigüedades y segunda mano en Pontevedra.
+            En O Faiado encontrarás antigüedades, muebles y objetos de segunda mano
+            en Pontevedra. También realizamos vaciados de viviendas o locales.
+            ¡Visítanos!
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#descubre"
