@@ -48,7 +48,11 @@ useHead({
     { property: "og:locale", content: "es_ES" },
     { property: "og:url", content: "https://ofaiado.es/" },
   ],
-  link: [{ rel: "canonical", href: "https://ofaiado.es/" }],
+  link: [
+    { rel: "canonical", href: "https://ofaiado.es/" },
+    { rel: "icon", type: "image/png", href: logo },
+    { rel: "apple-touch-icon", href: logo },
+  ],
   script: [
     {
       type: "application/ld+json",
