@@ -166,8 +166,26 @@ Para volver al release anterior, comprobar primero que `previous` apunta al rele
 ### Etiqueta de vaciados en portada: 31 de octubre de 2026, UTC
 
 - SHA desplegado: `a7eca786d8df73df4520a87c1bf0d96e91be1f3f`.
-- Release activo: `/srv/www/ofaiado/releases/20261031T022701Z-a7eca786d8df`.
+- Release activo en ese momento: `/srv/www/ofaiado/releases/20261031T022701Z-a7eca786d8df`.
 - Release anterior conservado en `/srv/www/ofaiado/previous`: `releases/20261031T022247Z-375de4d7118b`.
 - Evidencias y manifiesto: `/opt/gateway/backups/ofaiado/20261031T022701Z-a7eca786d8df/`.
 - La etiqueta enlaza a la sección de vaciados y utiliza iconos SVG monocromos.
 - Generación estática, HTML publicado, HTTPS, 19 archivos y redirecciones verificados. Los siete hosts previos conservaron sus respuestas; contenedores y Caddy no cambiaron. La revisión visual no pudo realizarse porque el navegador no respondió.
+
+### Galería y efectos de Inspira UI: 3 de noviembre de 2026, UTC
+
+- Estado: **SUCCESS**, verificado en la URL pública.
+- SHA desplegado: `e70e0b338513a4384160ca01dd187aa63c502e6d`.
+- Build estático: `.output/public`, generado localmente con `npm ci` y `npm run generate`.
+- Release activo: `/srv/www/ofaiado/releases/20261103T172206Z-e70e0b338513`.
+- Release anterior conservado en `/srv/www/ofaiado/previous`: `releases/20261031T022701Z-a7eca786d8df`.
+- Evidencias, estado previo/posterior y manifiesto: `/opt/gateway/backups/ofaiado/20261103T172206Z-e70e0b338513/`.
+- Tres fotografías de ambiente, WebP de 480/960 px con `srcset` y carga diferida. Procedencia y licencias en `THIRD_PARTY_NOTICES.md`.
+- Tarjetas con perspectiva adaptada de Inspira UI y aparición al entrar en pantalla. El contenido permanece prerenderizado y accesible sin JavaScript. Se respeta movimiento reducido y se desactiva la perspectiva en dispositivos táctiles.
+- Revisión local en Chrome y WebKit a 320, 375, 390, 768 y 1440 px; revisión de capturas móviles. Pruebas sobre producción en WebKit a las mismas anchuras. Sin desbordamiento ni errores de página/consola; fotos, navegación, FAQ y enlace a vaciados correctos. Movimiento reducido y contenido sin JavaScript verificados. Son pruebas de navegador con emulación móvil, no de un iPhone físico.
+- Portada HTTPS **200**, 25 archivos publicados idénticos al build por SHA-256; robots, sitemap, canonical y dirección de Pontevedra conservados. TLS verificado sin excepciones. HTTP y www **308**, conservando rutas y consultas.
+- Rutas privadas y directorio de imágenes sin índice: **404**.
+- Los 14 dominios configurados en Caddy conservaron sus códigos/redirecciones y TLS. IDs, fechas de inicio y salud de todos los contenedores, además del hash del Caddyfile, permanecieron idénticos. No se recargó Caddy.
+- GitHub no reportó comprobaciones de CI asociadas al commit de código en la consulta realizada tras el push.
+
+Para revertir, verificar que `current` sigue apuntando a `releases/20261103T172206Z-e70e0b338513` y que el release anterior contiene `index.html`; crear un enlace temporal a `releases/20261031T022701Z-a7eca786d8df` bajo `/srv/www/ofaiado/` y sustituir `current` con `sudo mv -Tf`, según la sección **Rollback**. No requiere reiniciar ni recargar Caddy.
