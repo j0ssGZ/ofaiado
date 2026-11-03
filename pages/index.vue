@@ -8,19 +8,22 @@ const categories = [
     number: "01",
     title: "Antigüedades",
     text: "Muebles con oficio, objetos de otras épocas y pequeños tesoros que siguen teniendo mucho que contar.",
-    icon: "cabinet",
+    image: "objetos-con-historia",
+    alt: "Objetos de metal, marcos y curiosidades en un espacio de antigüedades",
   },
   {
     number: "02",
     title: "Segunda mano",
     text: "Piezas que merecen seguir en uso. Una forma más personal y consciente de vestir tu casa.",
-    icon: "vase",
+    image: "maquina-escribir",
+    alt: "Máquina de escribir vintage sobre un escritorio de madera con libros",
   },
   {
     number: "03",
     title: "Objetos singulares",
     text: "Decoración, curiosidades y ese hallazgo inesperado que no sabías que estabas buscando.",
-    icon: "frame",
+    image: "ceramica",
+    alt: "Composición de ambiente con cerámica blanca y detalles decorativos",
   },
 ];
 useHead({
@@ -186,7 +189,7 @@ useHead({
       </div>
 
       <section id="descubre" class="discover wrap section-space">
-        <div class="section-heading">
+        <RevealOnScroll class="section-heading">
           <p class="eyebrow">01 / EL UNIVERSO O FAIADO</p>
           <div class="heading-row">
             <h2>Para quienes miran<br /><em>un poco más allá.</em></h2>
@@ -196,70 +199,20 @@ useHead({
               una casa se sienta tuya.
             </p>
           </div>
-        </div>
-        <div class="category-grid">
-          <article
-            v-for="category in categories"
+        </RevealOnScroll>
+        <div class="collection-grid">
+          <RevealOnScroll
+            v-for="(category, index) in categories"
             :key="category.number"
-            class="category"
+            :delay="index * 90"
           >
-            <div class="category-top">
-              <span>{{ category.number }}</span>
-              <svg
-                v-if="category.icon === 'cabinet'"
-                class="object-icon"
-                viewBox="0 0 100 100"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.4"
-                aria-hidden="true"
-              >
-                <path
-                  d="M20 22h60v61H20zM17 18h66v4H17zM20 40h60M20 59h60M27 83v6m46-6v6"
-                />
-                <path d="M44 30h12M44 49h12M44 69h12" />
-                <circle cx="50" cy="32" r="1" />
-                <circle cx="50" cy="51" r="1" />
-                <circle cx="50" cy="71" r="1" />
-              </svg>
-              <svg
-                v-else-if="category.icon === 'vase'"
-                class="object-icon"
-                viewBox="0 0 100 100"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.4"
-                aria-hidden="true"
-              >
-                <path
-                  d="M39 35h22l-3 14c0 7 15 15 15 26 0 10-10 14-23 14s-23-4-23-14c0-11 15-19 15-26l-3-14ZM37 35h26M50 35V12m0 18L35 15m15 11 13-15"
-                />
-                <path
-                  d="M50 20c-12 0-15-7-15-7s11-1 15 7Zm0 4c12 0 15-7 15-7s-11-1-15 7ZM32 70q18 10 36 0"
-                />
-              </svg>
-              <svg
-                v-else
-                class="object-icon"
-                viewBox="0 0 100 100"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.4"
-                aria-hidden="true"
-              >
-                <path
-                  d="M18 23h64v61H18zM23 28h54v51H23zM29 34h42v39H29zM29 65l14-16 13 13 7-8 8 10M40 23c-7-9 0-14 10-7 10-7 17-2 10 7"
-                />
-                <circle cx="58" cy="44" r="4" />
-              </svg>
-            </div>
-            <h3>{{ category.title }}</h3>
-            <p>{{ category.text }}</p>
-            <a :href="instagram" target="_blank" rel="noopener noreferrer"
-              >Pregunta por nuestras piezas <span><DecorativeIcon name="diagonal" /></span></a
-            >
-          </article>
+            <CollectionCard :category="category" :href="instagram" />
+          </RevealOnScroll>
         </div>
+        <p class="collection-caption">
+          <span>UNA MIRADA A LO QUE NOS INSPIRA</span>
+          <span>Imágenes de ambiente · Consulta las piezas disponibles en tienda.</span>
+        </p>
         <p class="small-note">
           Cada visita puede traer una sorpresa. Consulta por Instagram qué hay
           disponible o pásate por la tienda.
@@ -268,7 +221,7 @@ useHead({
 
       <section id="vaciados" class="clearance">
         <div class="wrap clearance-inner">
-          <div class="clearance-intro">
+          <RevealOnScroll class="clearance-intro">
             <p class="eyebrow">02 / HACEMOS ESPACIO</p>
             <h2>
               Un nuevo comienzo<br />para tu espacio.<br /><em
@@ -288,7 +241,7 @@ useHead({
               rel="noopener noreferrer"
               >Hablemos de tu vaciado <span><DecorativeIcon name="diagonal" /></span></a
             >
-          </div>
+          </RevealOnScroll>
           <div class="steps">
             <article>
               <span>01</span>
